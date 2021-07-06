@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+.App-wrapper {
+  display: grid;
+  grid-template-areas: "head head head"
+                      "nav cont cont";
+  grid-auto-columns: 1fr 5fr;
+  background-color: #fff;
+}
+.App-content{
+ grid-area: cont;
+ background-color: #e5e5e5;
+}

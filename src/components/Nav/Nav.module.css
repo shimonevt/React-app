@@ -1,0 +1,25 @@
+.nav {
+    grid-area: nav;
+    padding: 10px 5px;
+    border: 1px solid rgba(31,32,65,0.5);
+    border-radius: 8px;
+    max-width: 120px;
+  } 
+  .nav__item {
+    max-width: 120px;  
+  }
+  .nav__item a {
+    color: rgba(31,32,65,0.5); 
+    text-decoration: none; 
+  }
+  a.activeLink {
+    color: rgb(31,32,65);  
+  }
+  .nav__item:hover {
+    background: rgba(31,32,65,0.25);
+    cursor: pointer;
+  }
+  .link {
+    color: #61dafb;
+  }
+  

@@ -1,0 +1,11 @@
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  grid-area: head;
+  padding: 5px;
+}
+.App-header img {
+  height: 30px;
+  width: 40px;
+}
