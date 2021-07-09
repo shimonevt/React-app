@@ -2,10 +2,10 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import { Route } from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 const App = (props) => {
   return (
     <div className="App-wrapper">
@@ -15,10 +15,9 @@ const App = (props) => {
         <Route
           path="/dialogs"
           render={() => (
-            <Dialogs
-              messagesPage={props.state.messagesPage}
-              addMessage={props.addMessage}
-              updateNewMessageText={props.updateNewMessageText}
+            <DialogsContainer
+              dialogsPage={props.state.dialogsPage}
+              dispatch={props.dispatch}
             />
           )}
         />
@@ -26,9 +25,8 @@ const App = (props) => {
           path="/profile"
           component={() => (
             <Profile
-              addPost={props.addPost}
+              dispatch={props.dispatch}
               profilePage={props.state.profilePage}
-              updateNewPostText={props.updateNewPostText}
             />
           )}
         />
