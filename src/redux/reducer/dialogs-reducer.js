@@ -1,5 +1,5 @@
-import { SEND_MESSAGE, UPDATE_MESSAGE } from "../state";
-
+export const SEND_MESSAGE = "SEND-MESSAGE";
+export const UPDATE_MESSAGE = "UPDATE-MESSAGE";
 let initialState = {
   messages: [
     { id: 1, text: "Hello" },
@@ -13,27 +13,27 @@ let initialState = {
     { id: 4, name: "WRC" },
   ],
   newMessageText: "",
-}
+};
 
 const dialogsReducer = (state = initialState, action) => {
   switch (action.type) {
     case SEND_MESSAGE:
-      let newMessage = {
-        id: 1,
-        text: state.newMessageText,
+      return {
+        ...state,
+        newMessageText: "",
+        messages: [...state.messages, { id: 1, text: state.newMessageText }],
       };
-      state.messages.push(newMessage);
-      state.newMessageText = "";
-      return state;
     case UPDATE_MESSAGE:
-      state.newMessageText = action.message;
-      return state;
+      return { ...state, newMessageText: action.message };
     default:
       return state;
   }
 };
 
-export const updateMessageActionCreator = (messageText) => ({ type: UPDATE_MESSAGE, message: messageText });
+export const updateMessageActionCreator = (messageText) => ({
+  type: UPDATE_MESSAGE,
+  message: messageText,
+});
 export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE });
 
 export default dialogsReducer;

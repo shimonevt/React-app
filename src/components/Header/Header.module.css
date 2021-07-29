@@ -1,0 +1,19 @@
+.AppHeader {
+  background-color: #282c34;
+  display: grid;
+  grid-template-areas: 'img whitespace login';
+  font-size: calc(10px + 2vmin);
+  grid-area: head;
+  padding: 5px;  
+  grid-auto-columns: 1fr 12fr 1fr;
+}
+.AppHeaderImg {
+  grid-area: img;
+  height: 30px;
+  width: 40px;
+}
+.LoginBlock {
+  grid-area: login;
+  float: right;
+  color: #fff;
+}

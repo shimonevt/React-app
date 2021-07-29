@@ -1,0 +1,38 @@
+.user {
+    display: grid;
+    grid-template-areas: 'avatar info' 'avatar info' 'avatar status';
+    grid-auto-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    margin: 5px 0px;
+}
+.user__avatar {
+    grid-area: avatar;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.user__avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+.user__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    padding: 15px 5px 0px;
+}
+.user__status {
+    grid-area: status;
+    margin: 0px 5px;
+}
+.user__btn {
+    border: none;
+    color: #fff;
+    background: #282c34;
+    padding: 5px;
+    border-radius: 25px;
+}
+.user__btn:disabled {
+   color: red;
+}

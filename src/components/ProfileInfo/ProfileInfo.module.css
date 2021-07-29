@@ -1,0 +1,8 @@
+.ProfileAvatar {
+    max-width: 150px;
+    max-height: 150px;
+}
+.ProfileName {
+    font-size: 14px;
+    font-weight: bold;
+}
